@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ercisson Graph</title>
+<script type="text/javascript">
+		mxBasePath = "./src";
+</script>
+<script type="text/javascript" src="js/mxClient.js"></script>
+<script type="text/javascript" src="js/Main.js"></script>
+</head>
+
+<body>
+<div style="width: 500px; height:500px; border: 5px solid red;" id="graphContainer"> </div>
+
+
+</body>
+<script type="text/javascript">
+var graphContainer = document.getElementById("graphContainer");
+var myGraph = new Main(graphContainer);
+myGraph.init();
+
+</script>
+</html>
