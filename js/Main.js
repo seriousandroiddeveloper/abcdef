@@ -24,13 +24,14 @@ Main.prototype.loadgraph = function(){
 	localObj.graphObj.setConnectable(true);
 	localObj.graphObj.getModel().beginUpdate();
 	try{
-		localObj.graphObj.insertVertex(parent, "service", 'Bottom', 60, 60, 60, 60,
+		var v1 = localObj.graphObj.insertVertex(parent, "service", 'Bottom', 60, 60, 60, 60,
 				prefix+'verticalLabelPosition=bottom;verticalAlign=top');
-		localObj.graphObj.insertVertex(parent, "43", 'Top', 140, 60, 60, 60,
+		var v2 = localObj.graphObj.insertVertex(parent, "43", 'Top', 140, 60, 60, 60,
 					prefix+'verticalLabelPosition=top;verticalAlign=bottom');
-		localObj.graphObj.insertVertex(parent, null, 'Left', 60, 160, 60, 60,
+		var v3 = localObj.graphObj.insertVertex(parent, null, 'Left', 60, 160, 60, 60,
 					prefix+'labelPosition=left;align=right');
-		localObj.graphObj.insertVertex(parent, "service2", '', 140, 160, 60, 60);
+		var v4 = localObj.graphObj.insertVertex(parent, "service2", '', 140, 160, 60, 60);
+		localObj.graphObj.insertEdge(parent, null, '', v1, v2);
 	}
 	finally
 	{
