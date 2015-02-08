@@ -18,9 +18,16 @@ box-shadow: inset 0px 0px 15px 0px #ABABAB,5px 5px 5px 1px #242424;
 table th td tr{
 border-color : white;
 }
+.vertexstyle{
+color:black;
+}
+
 </style>
+<script type="text/javascript" src="js/jquery/jquery-1.11.2.js"></script>
 <script type="text/javascript" src="js/mxClient.js"></script>
+<script type="text/javascript" src="js/eUtility.js"></script>
 <script type="text/javascript" src="js/Main.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
 </head>
 
 <body>
@@ -30,8 +37,6 @@ border-color : white;
 </body>
 <script type="text/javascript">
 var graphContainer = document.getElementById("graphContainer");
-var myGraph = new Main(graphContainer);
-myGraph.init();
-
+run(graphContainer);
 </script>
 </html>
