@@ -160,6 +160,10 @@ function run(graphContainer){
 	addUser(680,500,2);
 	addUser(770,500,1);
 	
+	var callButton = document.createElement("button");
+	/*callButton.setAttribute("type","button");*/
+	callButton.innerHTML = "Call";
+	myGraph.addVertices("callBtn",callButton,"",90,570,50,20);
 	
 	
 	var sequence = [
@@ -182,8 +186,9 @@ function run(graphContainer){
 	
 	//myGraph.addSimpleEdge(VertexName.Mobile1,VertexName.Company1,'simple1','2');//new mxPoint(50, 330)
 	
-	var k =0;
-	setInterval(function () { if(k<sequence.length) {sequence[k](k);k++;} }, 1000);
+	
+	myGraph.setEventonButton(function(){var k =0;setInterval(function () { if(k<sequence.length) {sequence[k](k);k++;} }, 1000);});
+	
 	
 	
 	

@@ -24,6 +24,7 @@ Main.prototype.init = function(){
 	
 	localObj.overrideMethods();
 	localObj.loadgraph();
+	//localObj.setEventonButton();
 };
 
 Main.prototype.addMxGraphcontainer = function(div){
@@ -38,7 +39,9 @@ Main.prototype.loadgraph = function(){
 	localObj.graphObj.setConnectable(false);
 	localObj.graphObj.setCellsResizable(false);
 	localObj.graphObj.setCellsMovable(true);
-	localObj.graphObj.setEnabled(true);
+	localObj.graphObj.setEnabled(false);
+	
+	
 	
 	/*localObj.graphObj.getModel().beginUpdate();
 	try{
@@ -203,6 +206,13 @@ Main.prototype.addDualThickEdge = function(vertex1,vertex2, Label){
 	finally
 	{
 		localObj.graphObj.getModel().endUpdate();
+	}
+	
+};
+Main.prototype.setEventonButton = function(functionCall){
+var localObj = this;
+localObj.graphObj.click = function(me,t){
+	functionCall();
 	}
 	
 };
