@@ -35,7 +35,7 @@ Main.prototype.loadgraph = function(){
 	var localObj = this;
 	
 	//var prefix = 'shape=image;image=src/images/heart.png;';
-	localObj.graphObj.setConnectable(true);
+	localObj.graphObj.setConnectable(false);
 	localObj.graphObj.setCellsResizable(false);
 	localObj.graphObj.setCellsMovable(true);
 	localObj.graphObj.setEnabled(true);
@@ -93,7 +93,7 @@ Main.prototype.overrideMethods = function(){
 	}
 	
 	
-	/*localObj.graphObj.getAllConnectionConstraints = function(terminal)
+	localObj.graphObj.getAllConnectionConstraints = function(terminal)
 	{
 		if (terminal != null && this.model.isVertex(terminal.cell))
 		{
@@ -108,7 +108,7 @@ Main.prototype.overrideMethods = function(){
 		}
 
 		return null;
-	};*/
+	};
 	
 	
 };
@@ -196,8 +196,8 @@ Main.prototype.addDualThickEdge = function(vertex1,vertex2, Label){
 	
 	localObj.graphObj.getModel().beginUpdate();	
 	try{
-		 var e1 = localObj.graphObj.insertEdge(parent, null, Label, localObj.nameAndVertexmap.getItem(vertex1), localObj.nameAndVertexmap.getItem(vertex2), 'perimeterSpacing=4;strokeWidth=4;labelBackgroundColor=white;fontStyle=1;strokeColor=black');
-		 var e2 = localObj.graphObj.insertEdge(parent, null, Label, localObj.nameAndVertexmap.getItem(vertex2), localObj.nameAndVertexmap.getItem(vertex1), 'perimeterSpacing=4;strokeWidth=4;labelBackgroundColor=white;fontStyle=1;strokeColor=black');
+		 var e1 = localObj.graphObj.insertEdge(parent, null, Label, localObj.nameAndVertexmap.getItem(vertex1), localObj.nameAndVertexmap.getItem(vertex2), 'perimeterSpacing=1;strokeWidth=2;labelBackgroundColor=white;fontStyle=1;strokeColor=black');
+		 var e2 = localObj.graphObj.insertEdge(parent, null, Label, localObj.nameAndVertexmap.getItem(vertex2), localObj.nameAndVertexmap.getItem(vertex1), 'perimeterSpacing=1;strokeWidth=2;labelBackgroundColor=white;fontStyle=1;strokeColor=black');
 	}
 	
 	finally
